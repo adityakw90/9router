@@ -327,7 +327,9 @@ export function claudeToKiroRequest(model, body, stream, credentials) {
   };
 
   if (profileArn) payload.profileArn = profileArn;
-  if (systemPrompt) payload.systemPrompt = systemPrompt;
+  // TODO: remove this once we have a way to set the system prompt in Kiro
+  // ref: https://github.com/decolua/9router/pull/3238
+  // if (systemPrompt) payload.systemPrompt = systemPrompt;
   if (additionalModelRequestFields) {
     payload.additionalModelRequestFields = additionalModelRequestFields;
   }
